@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start of start screen -->
+    <div id="start-screen" class="screen">
+      <h1 class="font-a" id="game-title">Rock, Paper, Scissors</h1>
+      <div id = "icons">
+      <img class="icon"src="images/rock-icon.png" alt="rock">
+      <img class="icon"src="images/copy-icon.png" alt="paper">
+      <img class="icon"src="images/scissors-icon.png" alt="scissors">
+      </div>
+      <div class="grid-center">
+        <input
+          type="text"
+          name="username"
+          id="usernameInput"
+          pattern="^[a-zA-Z]"
+          placeholder="Please enter a username"
+        />
+        <p>Restrictions</p>
+        <ul>
+          <li>Username must have no more than 10 characters.</li>
+          <li>First character must be an English letter.</li>
+        </ul>
+        <button id="startGame">Start game</button>
+      </div>
+    </div>
+    <!-- End of start screen -->
+    <div id="game-screen" class="screen hidden">
+      <h1 class="font-a" id="game-title">Rock, Paper, Scissors</h1>
+      <select name="move" id="moves">
+        <option disabled selected="selected" value="">Pick an option</option>
+        <option value="ROCK">Rock</option>
+        <option value="PAPER">Paper</option>
+        <option value="SCISSORS">Scissors</option>
+      </select>
+      <table>
+        <thead>
+          <tr>
+            <th>Your name</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Games</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="info__username">-</td>
+            <td id="info__win">0</td>
+            <td id="info__lose">0</td>
+            <td id="info__draw">0</td>
+            <td id="info__game">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="restart-game">Restart game</button>
+      <div id="arena">
+        <img
+          id="contestant1"
+          src="images/paper.jpg"
+          alt="paper"
+          class="hidden-v contestant"
+        />
+        <img id="fight" src="images/fight.png" alt="fight" class="contestant" />
+        <img
+          id="contestant2"
+          src="images/paper.jpg"
+          alt="paper"
+          class="hidden-v contestant"
+        />
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
